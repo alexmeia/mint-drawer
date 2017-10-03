@@ -1,0 +1,13 @@
+npm-debug.log
+.DS_Store
+*.css
+*.js.map
+app/**/*.js
+hooks/
+lib/
+node_modules/
+platforms/
+tmp/
+typings/
+report/
+.vscode/

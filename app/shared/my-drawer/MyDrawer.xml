@@ -1,0 +1,23 @@
+<!--
+The MyDrawer custom component view is where you define what will be displayed in the app drawer.
+Feel free to customize layouts and components to change how your app drawer looks.
+-->
+<StackLayout class="sidedrawer sidedrawer-left" loaded="onLoaded">
+    <StackLayout class="sidedrawer-header">
+        <Label class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
+        <Label class="sidedrawer-header-brand" text="User Name"></Label>
+        <Label class="footnote" text="username@mail.com"></Label>
+    </StackLayout>
+
+    <StackLayout class="sidedrawer-content">
+        <ListView id="listview" separatorColor="transparent" items="{{ navigationItems }}" itemTap="onNavigationItemTap">
+            <ListView.itemTemplate>
+                    <GridLayout columns="auto, *" rows="50" 
+                        class="{{ 'sidedrawer-list-item sidedrawer-list-item-' + name + (isSelected ? ' selected':'') }}">
+                        <Label row="0" col="0" text="{{ icon }}" class="fa"/>
+                        <Label row="0" col="1" text="{{ title }}" textWrap="true"/>
+                    </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</StackLayout>
